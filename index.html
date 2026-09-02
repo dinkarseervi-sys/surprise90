@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Special Surprise ❤️</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:linear-gradient(135deg,#ffd6e7,#fff);
+    text-align:center;
+    color:#333;
+}
+
+#lock{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.box{
+    background:white;
+    padding:35px 25px;
+    border-radius:25px;
+    width:85%;
+    max-width:380px;
+    box-shadow:0 10px 30px #0002;
+}
+
+h1{color:#e91e63;}
+
+input{
+    padding:14px;
+    width:80%;
+    border:1px solid #ddd;
+    border-radius:12px;
+    font-size:18px;
+    text-align:center;
+}
+
+button{
+    margin-top:15px;
+    padding:13px 25px;
+    border:0;
+    border-radius:12px;
+    background:#e91e63;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+#error{
+    color:red;
+    margin-top:12px;
+    display:none;
+}
+
+#content{
+    display:none;
+    padding:25px 15px;
+}
+
+.card{
+    background:white;
+    max-width:600px;
+    margin:auto;
+    padding:20px;
+    border-radius:25px;
+    box-shadow:0 8px 25px #0002;
+}
+
+.message{
+    font-size:20px;
+    line-height:1.6;
+}
+
+audio{
+    width:100%;
+    margin-top:15px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="lock">
+    <div class="box">
+        <h1>🔐 Special Surprise</h1>
+        <p>Ye surprise sirf ek special person ke liye hai ❤️</p>
+
+        <input type="password" id="pin" placeholder="Enter PIN">
+
+        <br>
+
+        <button onclick="unlock()">Open Surprise 💌</button>
+
+        <p id="error">Wrong PIN 😅 Try again!</p>
+    </div>
+</div>
+
+<div id="content">
+
+    <div class="card">
+
+        <h1>❤️ For You ❤️</h1>
+
+        <p class="message">
+            Kabhi-kabhi chhoti si misunderstanding ho jaati hai...
+            <br><br>
+            Lekin tum mere liye bahut special ho. 🫶
+            <br><br>
+            <b>Sorry ❤️</b>
+            <br>
+            Ab thoda sa smile kar do 😊
+        </p>
+
+        <h2>🎧 Ek baat sunogi?</h2>
+
+        <audio controls>
+            <source src="voice.mp3" type="audio/mpeg">
+            Your browser does not support audio.
+        </audio>
+
+        <p>💗 Made specially for you 💗</p>
+
+    </div>
+
+</div>
+
+<script>
+function unlock(){
+
+    const pin = document.getElementById("pin").value;
+
+    if(pin === "1771"){
+        document.getElementById("lock").style.display="none";
+        document.getElementById("content").style.display="block";
+    }else{
+        document.getElementById("error").style.display="block";
+    }
+}
+</script>
+
+</body>
+</html>
