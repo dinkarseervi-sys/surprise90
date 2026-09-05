@@ -3,145 +3,894 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Special Surprise ❤️</title>
+
+<title>For My Special Person ❤️</title>
 
 <style>
+
+*{
+    box-sizing:border-box;
+}
+
 body{
     margin:0;
     font-family:Arial,sans-serif;
-    background:linear-gradient(135deg,#ffd6e7,#fff);
-    text-align:center;
+    background:linear-gradient(135deg,#ffd6e7,#fff5f9);
     color:#333;
+    text-align:center;
 }
+
+/* ---------- PIN PAGE ---------- */
 
 #lock{
     min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
+    padding:20px;
 }
 
 .box{
     background:white;
+    width:100%;
+    max-width:390px;
     padding:35px 25px;
-    border-radius:25px;
-    width:85%;
-    max-width:380px;
-    box-shadow:0 10px 30px #0002;
+    border-radius:28px;
+    box-shadow:0 10px 35px #0002;
 }
 
-h1{color:#e91e63;}
+.box h1{
+    color:#e91e63;
+}
 
 input{
     padding:14px;
-    width:80%;
+    width:85%;
     border:1px solid #ddd;
-    border-radius:12px;
+    border-radius:14px;
     font-size:18px;
     text-align:center;
+    outline:none;
 }
 
 button{
     margin-top:15px;
     padding:13px 25px;
     border:0;
-    border-radius:12px;
+    border-radius:30px;
     background:#e91e63;
     color:white;
     font-size:16px;
     cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
 }
 
 #error{
-    color:red;
-    margin-top:12px;
+    color:#e53935;
     display:none;
 }
 
+/* ---------- MAIN ---------- */
+
 #content{
     display:none;
-    padding:25px 15px;
+    padding:25px 15px 60px;
 }
 
 .card{
     background:white;
-    max-width:600px;
-    margin:auto;
-    padding:20px;
-    border-radius:25px;
-    box-shadow:0 8px 25px #0002;
+    max-width:650px;
+    margin:25px auto;
+    padding:25px 20px;
+    border-radius:28px;
+    box-shadow:0 8px 30px #0002;
+}
+
+h1{
+    color:#e91e63;
+}
+
+h2{
+    color:#d81b60;
 }
 
 .message{
-    font-size:20px;
-    line-height:1.6;
+    font-size:19px;
+    line-height:1.7;
 }
+
+/* ---------- PHOTOS ---------- */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+    margin-top:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:18px;
+}
+
+/* ---------- VIDEO ---------- */
+
+.video-box{
+    margin-top:20px;
+}
+
+video{
+    width:100%;
+    border-radius:20px;
+    margin-top:15px;
+}
+
+/* ---------- AUDIO ---------- */
 
 audio{
     width:100%;
     margin-top:15px;
 }
+
+/* ---------- FUTURE PHOTO ---------- */
+
+.future{
+    background:linear-gradient(135deg,#fff8e1,#ffe0ec);
+    border:2px solid #f3c969;
+}
+
+.future img{
+    width:100%;
+    max-width:450px;
+    border-radius:22px;
+    margin-top:15px;
+}
+
+/* ---------- QUESTION ---------- */
+
+.love-question{
+    background:linear-gradient(135deg,#fff,#ffe0ec);
+}
+
+.yes-btn{
+    background:#e91e63;
+}
+
+.no-btn{
+    background:#777;
+}
+
+#noMessage{
+    display:none;
+    margin-top:20px;
+    font-size:20px;
+}
+
+/* ---------- PREMIUM ---------- */
+
+#subscription{
+    display:none;
+}
+
+.premium{
+    background:linear-gradient(135deg,#fff8e1,#ffe0ec);
+    border:2px solid #e0b84c;
+    border-radius:30px;
+    padding:30px 20px;
+    box-shadow:0 12px 35px #0002;
+}
+
+.premium h1{
+    color:#b8860b;
+}
+
+.premium h2{
+    color:#b8860b;
+}
+
+.plan{
+    text-align:left;
+    max-width:380px;
+    margin:20px auto;
+    font-size:18px;
+    line-height:2;
+}
+
+.final{
+    font-size:23px;
+    color:#e91e63;
+    font-weight:bold;
+}
+
+/* ---------- HEART ANIMATION ---------- */
+
+.heart{
+    position:fixed;
+    bottom:-30px;
+    font-size:25px;
+    pointer-events:none;
+    animation:heartUp 4s linear forwards;
+}
+
+@keyframes heartUp{
+
+    0%{
+        transform:translateY(0);
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-100vh);
+        opacity:0;
+    }
+
+}
+
 </style>
 </head>
 
 <body>
 
-<div id="lock">
-    <div class="box">
-        <h1>🔐 Special Surprise</h1>
-        <p>Ye surprise sirf ek special person ke liye hai ❤️</p>
 
-        <input type="password" id="pin" placeholder="Enter PIN">
+<!-- ================================= -->
+<!-- PIN PAGE -->
+<!-- ================================= -->
+
+<div id="lock">
+
+    <div class="box">
+
+        <h1>🔐 Special Surprise</h1>
+
+        <p>
+            Ye surprise sirf ek special person ke liye hai ❤️
+        </p>
+
+        <p>
+            PIN daalo aur andar aao... 😂
+        </p>
+
+        <input
+            type="password"
+            id="pin"
+            placeholder="Enter PIN"
+        >
 
         <br>
 
-        <button onclick="unlock()">Open Surprise 💌</button>
+        <button onclick="unlock()">
+            Open Surprise 💌
+        </button>
 
-        <p id="error">Wrong PIN 😅 Try again!</p>
+        <p id="error">
+            Wrong PIN 😅 Try Again!
+        </p>
+
     </div>
+
 </div>
+
+
+
+<!-- ================================= -->
+<!-- MAIN CONTENT -->
+<!-- ================================= -->
 
 <div id="content">
 
-    <div class="card">
 
-        <h1>❤️ For You ❤️</h1>
+<!-- INTRO -->
 
-        <p class="message">
-            Kabhi-kabhi chhoti si misunderstanding ho jaati hai...
-            <br><br>
-            Lekin tum mere liye bahut special ho. 🫶
-            <br><br>
-            <b>Sorry ❤️</b>
-            <br>
-            Ab thoda sa smile kar do 😊
-        </p>
+<div class="card">
 
-        <h2>🎧 Ek baat sunogi?</h2>
+    <h1>❤️ Hey You ❤️</h1>
 
-        <audio controls>
-            <source src="voice.mp3" type="audio/mpeg">
-            Your browser does not support audio.
-        </audio>
+    <p class="message">
 
-        <p>💗 Made specially for you 💗</p>
+        Welcome to my little surprise... 🥺❤️
+
+        <br><br>
+
+        Pata nahi saamne se main sab kuch
+        itne achhe se bol pata ya nahi...
+
+        <br><br>
+
+        Isliye socha ek chhoti si website bana deta hoon
+        jisme meri feelings + hamari memories
+        + thodi si pagalpan 😂❤️ sab kuch hoga.
+
+        <br><br>
+
+        Aur haan...
+
+        <br>
+
+        <b>Sabse pehle... I'M SORRY ❤️</b>
+
+    </p>
+
+</div>
+
+
+
+<!-- ================================= -->
+<!-- SORRY -->
+<!-- ================================= -->
+
+<div class="card">
+
+    <h2>🥺 Sabse Pehle Sorry</h2>
+
+    <p class="message">
+
+        Mujhse jo bhi galti hui,
+        uske liye dil se sorry. ❤️
+
+        <br><br>
+
+        Mera intention kabhi bhi tumhe hurt
+        karna nahi tha.
+
+        <br><br>
+
+        Tum mere liye bahut special ho
+        aur main tumhari smile ko
+        kisi bhi wajah se kam nahi karna chahta.
+
+        <br><br>
+
+        Isliye...
+
+        <br>
+
+        <b>Please forgive me? 🥺❤️</b>
+
+    </p>
+
+</div>
+
+
+
+<!-- ================================= -->
+<!-- OUR PHOTOS -->
+<!-- ================================= -->
+
+<div class="card">
+
+    <h2>📸 Hamari Chhoti Si Duniya</h2>
+
+    <p>
+        Kuch memories jo mere liye bahut special hain ❤️
+    </p>
+
+    <div class="gallery">
+
+        <!-- PHOTO 1 -->
+
+        <img src="images/photo1.jpg"
+             alt="Our Memory">
+
+        <!-- PHOTO 2 -->
+
+        <img src="images/photo2.jpg"
+             alt="Our Memory">
+
+        <!-- PHOTO 3 -->
+
+        <img src="images/photo3.jpg"
+             alt="Our Memory">
+
+        <!-- FUTURE PHOTO -->
+
+        <img src="images/future.jpg"
+             alt="Our Future">
 
     </div>
 
 </div>
 
+
+
+<!-- ================================= -->
+<!-- VOICE NOTE / SONG -->
+<!-- ================================= -->
+
+<div class="card">
+
+    <h2>🎙️ Ek Gaana Sirf Tumhare Liye</h2>
+
+    <p class="message">
+
+        Ye professional singer wali awaaz nahi hai 😂
+
+        <br>
+
+        Lekin dil se gaya hai... ❤️
+
+        <br><br>
+
+        Headphones laga lena 🎧🥰
+
+    </p>
+
+    <audio controls>
+
+        <source
+            src="audio/song.mp3"
+            type="audio/mpeg">
+
+        Your browser does not support audio.
+
+    </audio>
+
+</div>
+
+
+
+<!-- ================================= -->
+<!-- DANCE VIDEO -->
+<!-- ================================= -->
+
+<div class="card">
+
+    <h2>💃 Pehle Thoda Entertainment</h2>
+
+    <p class="message">
+
+        Socha sirf sorry bolne se kaam nahi chalega 😂
+
+        <br><br>
+
+        Isliye pehle ek mast dance dekh lo. 💃❤️
+
+    </p>
+
+    <div class="video-box">
+
+        <video controls>
+
+            <source
+                src="videos/dance.mp4"
+                type="video/mp4">
+
+        </video>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================================= -->
+<!-- SORRY VIDEO -->
+<!-- ================================= -->
+
+<div class="card">
+
+    <h2>🥺 Ab Seriously Wali Sorry</h2>
+
+    <p class="message">
+
+        Ab mazaak bahut ho gaya 😂
+
+        <br><br>
+
+        Ab meri baat ek baar
+        video mein sun lena. ❤️
+
+    </p>
+
+    <div class="video-box">
+
+        <video controls>
+
+            <source
+                src="videos/sorry.mp4"
+                type="video/mp4">
+
+        </video>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================================= -->
+<!-- FUNNY GAME VIDEO -->
+<!-- ================================= -->
+
+<div class="card">
+
+    <h2>🎮 Ab Gussa Utarne Ka Special Treatment 😂</h2>
+
+    <p class="message">
+
+        Agar abhi bhi thoda gussa hai...
+
+        <br><br>
+
+        Toh ye video dekhna compulsory hai 😂❤️
+
+        <br><br>
+
+        <b>
+        Iske baad tumhara saara gussa
+        utar jaana chahiye! 😌😂
+        </b>
+
+    </p>
+
+    <div class="video-box">
+
+        <video controls>
+
+            <source
+                src="videos/game.mp4"
+                type="video/mp4">
+
+        </video>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================================= -->
+<!-- FUTURE -->
+<!-- ================================= -->
+
+<div class="card future">
+
+    <h2>🔮 Ek Chhota Sa Future Dream</h2>
+
+    <p class="message">
+
+        Aur ye photo...
+
+        <br><br>
+
+        Abhi sirf ek imagination hai. 🥰
+
+        <br><br>
+
+        Lekin kaun jaane...
+
+        <br>
+
+        <b>
+        Ek din ye imagination reality ban jaaye. ❤️
+        </b>
+
+    </p>
+
+    <img
+        src="images/future.jpg"
+        alt="Our Future">
+
+</div>
+
+
+
+<!-- ================================= -->
+<!-- FINAL QUESTION -->
+<!-- ================================= -->
+
+<div class="card love-question">
+
+    <h1>🥺❤️ One Last Question ❤️🥺</h1>
+
+    <p class="message">
+
+        Ab to mujhse naraz nahi ho na? 😂❤️
+
+        <br><br>
+
+        Ab to mujhse
+
+        <br>
+
+        <b>BAHUTTTTT PYAAR</b>
+
+        <br>
+
+        karti ho na? 🥺❤️
+
+    </p>
+
+
+    <button
+        class="yes-btn"
+        onclick="yesClicked()">
+
+        YES ❤️
+
+    </button>
+
+
+    <button
+        class="no-btn"
+        onclick="noClicked()">
+
+        NO 🙈
+
+    </button>
+
+
+    <div id="noMessage">
+
+        🥺👉👈
+
+        <br><br>
+
+        Achhaaa... abhi bhi gussa ho? 😂
+
+        <br><br>
+
+        Dekho udhar 👉❤️
+
+        <br>
+
+        YES button tumhara wait kar raha hai 😂
+
+        <br>
+
+        ❤️
+
+        <br>
+
+        <button onclick="yesClicked()">
+
+            YES Daba Do Na 😂❤️
+
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================================= -->
+<!-- PREMIUM LOVE -->
+<!-- ================================= -->
+
+<div id="subscription">
+
+    <div class="card premium">
+
+        <h1>
+            💎 PREMIUM LOVE 💎
+        </h1>
+
+        <h2>
+            ❤️ LIFE TIME PLAN ❤️
+        </h2>
+
+        <p class="message">
+
+            🎉 Congratulations! 🎉
+
+            <br><br>
+
+            Tumne successfully
+            <b>Premium Love Plan</b>
+            select kar liya hai. 😂❤️
+
+        </p>
+
+
+        <div class="plan">
+
+            ❤️ Unlimited Pyaar
+
+            <br>
+
+            🤗 Unlimited Hugs
+
+            <br>
+
+            😘 Unlimited Kisses
+
+            <br>
+
+            🗣️ Unlimited Baatein
+
+            <br>
+
+            😂 Unlimited Pareshan Karna
+
+            <br>
+
+            🫶 Unlimited Care
+
+            <br>
+
+            🥰 Unlimited Smile
+
+            <br>
+
+            ❤️ Har Situation Mein Saath
+
+            <br>
+
+            ♾️ Lifetime Togetherness
+
+        </div>
+
+
+        <h2>
+
+            💎 SUBSCRIPTION:
+            NEVER EXPIRES ♾️
+
+        </h2>
+
+
+        <p>
+
+            💰 Price:
+
+            <br>
+
+            <b>
+            Sirf ek cute si smile 😊❤️
+            </b>
+
+        </p>
+
+
+        <p class="final">
+
+            ❤️ LIFETIME PLAN ACTIVATED ❤️
+
+        </p>
+
+
+        <p class="message">
+
+            Thank you for choosing me 😂❤️
+
+            <br><br>
+
+            I Love You ❤️
+
+            <br>
+
+            Always keep smiling 😊
+
+        </p>
+
+    </div>
+
+</div>
+
+
+</div>
+
+
+
+<!-- ================================= -->
+<!-- JAVASCRIPT -->
+<!-- ================================= -->
+
 <script>
+
 function unlock(){
 
-    const pin = document.getElementById("pin").value;
+    const pin =
+        document.getElementById("pin").value;
 
-    if(pin === "1771"){
-        document.getElementById("lock").style.display="none";
-        document.getElementById("content").style.display="block";
-    }else{
-        document.getElementById("error").style.display="block";
+    if(pin === "1917"){
+
+        document.getElementById("lock")
+        .style.display="none";
+
+        document.getElementById("content")
+        .style.display="block";
+
+        window.scrollTo(0,0);
+
+        createHearts();
+
     }
+
+    else{
+
+        document.getElementById("error")
+        .style.display="block";
+
+    }
+
 }
+
+
+
+function noClicked(){
+
+    document.getElementById("noMessage")
+    .style.display="block";
+
+}
+
+
+
+function yesClicked(){
+
+    document.getElementById("noMessage")
+    .style.display="none";
+
+    document.getElementById("subscription")
+    .style.display="block";
+
+    document.getElementById("subscription")
+    .scrollIntoView({
+
+        behavior:"smooth"
+
+    });
+
+    createHearts();
+
+}
+
+
+
+function createHearts(){
+
+    for(let i=0;i<20;i++){
+
+        setTimeout(function(){
+
+            const heart =
+                document.createElement("div");
+
+            heart.className="heart";
+
+            const hearts=[
+                "❤️",
+                "💕",
+                "💖",
+                "💗",
+                "🥰",
+                "😘"
+            ];
+
+            heart.innerHTML =
+                hearts[
+                    Math.floor(
+                        Math.random()*hearts.length
+                    )
+                ];
+
+            heart.style.left =
+                Math.random()*100+"vw";
+
+            heart.style.animationDuration =
+                (3+Math.random()*3)+"s";
+
+            document.body.appendChild(heart);
+
+            setTimeout(function(){
+
+                heart.remove();
+
+            },6000);
+
+        },i*120);
+
+    }
+
+}
+
 </script>
 
 </body>
