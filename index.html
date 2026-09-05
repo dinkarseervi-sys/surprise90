@@ -3,20 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>For My Malkin ❤️</title>
 
 <style>
 *{
     box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
 body{
-    margin:0;
     font-family:Arial,sans-serif;
-    background:linear-gradient(135deg,#ff6f91,#ffb6c1,#fff0f5);
-    color:#333;
+    background:linear-gradient(135deg,#ffd6e7,#fff0f5);
+    color:#5a1833;
     text-align:center;
+    overflow-x:hidden;
 }
 
 #lock{
@@ -27,228 +28,233 @@ body{
     padding:20px;
 }
 
-.box{
+.lock-box{
     background:white;
     padding:35px 25px;
     border-radius:25px;
-    box-shadow:0 10px 30px rgba(0,0,0,.2);
-    max-width:400px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
     width:100%;
+    max-width:400px;
 }
 
-.box h1{
-    color:#ff4f81;
+.lock-box h1{
+    color:#e91e63;
+    margin-bottom:15px;
+}
+
+.lock-box p{
+    margin-bottom:20px;
 }
 
 input{
-    padding:14px;
     width:100%;
-    border:2px solid #ff8fab;
-    border-radius:15px;
-    font-size:18px;
+    padding:14px;
+    border:2px solid #ff80ab;
+    border-radius:12px;
     text-align:center;
-    margin:15px 0;
+    font-size:18px;
+    outline:none;
 }
 
-.unlock{
-    background:#ff4f81;
-    color:white;
-    padding:13px 30px;
+button{
+    border:none;
+    padding:13px 25px;
     border-radius:25px;
+    background:#e91e63;
+    color:white;
     font-size:17px;
+    cursor:pointer;
+    margin-top:15px;
+}
+
+button:hover{
+    background:#c2185b;
+}
+
+#wrong{
+    display:none;
+    color:red;
+    margin-top:12px;
 }
 
 #content{
     display:none;
-    padding:20px 12px 50px;
+    padding:20px;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
 }
 
 .card{
-    background:rgba(255,255,255,.95);
-    max-width:850px;
+    background:white;
     margin:25px auto;
     padding:25px;
     border-radius:25px;
-    box-shadow:0 8px 25px rgba(0,0,0,.15);
+    box-shadow:0 8px 25px rgba(0,0,0,.12);
 }
 
 h1,h2{
-    color:#ff3f75;
+    color:#e91e63;
+}
+
+h1{
+    margin-bottom:15px;
+}
+
+h2{
+    margin-bottom:15px;
 }
 
 p{
-    line-height:1.7;
     font-size:17px;
+    line-height:1.7;
 }
 
 .gallery{
     display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:15px;
-    max-width:800px;
-    margin:auto;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
 }
 
 .photo-card{
-    background:#fff;
-    padding:10px;
-    border-radius:18px;
-    box-shadow:0 5px 15px rgba(0,0,0,.12);
+    background:#fff5f8;
+    padding:12px;
+    border-radius:20px;
 }
 
 .photo-card img{
     width:100%;
-    height:250px;
+    height:300px;
     object-fit:cover;
-    border-radius:15px;
+    border-radius:16px;
     display:block;
 }
 
 .caption{
-    font-size:15px;
-    font-weight:bold;
-    color:#ff3f75;
-    margin:12px 5px 5px;
+    margin-top:12px;
+    font-size:16px;
     line-height:1.5;
-}
-
-.audio-box{
-    background:#fff0f5;
-    padding:20px;
-    border-radius:20px;
 }
 
 audio{
     width:100%;
-    max-width:600px;
-}
-
-.video-box{
-    margin:20px auto;
-    max-width:700px;
+    margin-top:15px;
 }
 
 video{
     width:100%;
-    border-radius:20px;
-    box-shadow:0 5px 20px rgba(0,0,0,.2);
-}
-
-.future{
-    background:linear-gradient(135deg,#fff,#ffe4ec);
+    max-height:500px;
+    border-radius:18px;
+    margin-top:10px;
+    background:#000;
 }
 
 .future img{
     width:100%;
     max-width:600px;
     border-radius:20px;
-    margin:15px auto 0;
     display:block;
+    margin:15px auto;
 }
 
-.love-question{
-    background:#fff;
+.yesno{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
 }
 
-.yes-btn{
-    background:#ff3f75;
-    color:white;
-    padding:15px 35px;
-    border-radius:30px;
-    font-size:20px;
-    margin:10px;
-}
-
-.no-btn{
-    background:#777;
-    color:white;
-    padding:15px 35px;
-    border-radius:30px;
-    font-size:20px;
-    margin:10px;
+.yesno button{
+    min-width:120px;
 }
 
 #noMessage{
     display:none;
     margin-top:20px;
-    color:#ff3f75;
-    font-weight:bold;
+    padding:20px;
+    background:#fff0f5;
+    border-radius:20px;
+    font-size:18px;
 }
 
 #subscription{
     display:none;
+    margin-top:25px;
 }
 
 .premium{
-    background:linear-gradient(135deg,#fff8dc,#fff);
-    border:3px solid #d4af37;
-    max-width:600px;
-    margin:25px auto;
-    padding:30px 20px;
-    border-radius:30px;
-    box-shadow:0 10px 35px rgba(212,175,55,.3);
+    background:linear-gradient(135deg,#fff8dc,#ffe4ec);
+    border:3px solid #ffd700;
+    border-radius:25px;
+    padding:25px;
+    box-shadow:0 8px 30px rgba(0,0,0,.15);
 }
 
 .premium h2{
-    color:#b8860b;
+    color:#d4a000;
 }
 
-.plan{
+.benefits{
     text-align:left;
-    max-width:450px;
-    margin:auto;
-    line-height:2;
-    font-size:17px;
+    max-width:500px;
+    margin:20px auto;
+}
+
+.benefits p{
+    margin:8px 0;
 }
 
 .price{
     font-size:20px;
     font-weight:bold;
-    color:#b8860b;
-    margin-top:20px;
+    color:#e91e63;
+    margin-top:15px;
 }
 
-.final{
-    font-size:20px;
-    color:#ff3f75;
+.activated{
+    margin-top:15px;
+    font-size:18px;
     font-weight:bold;
 }
 
 .heart{
     position:fixed;
-    bottom:-20px;
-    font-size:22px;
+    bottom:-30px;
+    font-size:25px;
     animation:float 5s linear forwards;
     pointer-events:none;
-    z-index:9999;
+    z-index:999;
 }
 
 @keyframes float{
     0%{
-        transform:translateY(0);
+        transform:translateY(0) rotate(0deg);
         opacity:1;
     }
     100%{
-        transform:translateY(-100vh);
+        transform:translateY(-110vh) rotate(360deg);
         opacity:0;
     }
 }
 
-@media(max-width:600px){
+@media(max-width:650px){
     .gallery{
         grid-template-columns:1fr;
     }
 
     .photo-card img{
-        height:280px;
+        height:auto;
+        max-height:500px;
+    }
+
+    #content{
+        padding:12px;
     }
 
     .card{
         padding:20px 15px;
-    }
-
-    p{
-        font-size:16px;
     }
 }
 </style>
@@ -256,12 +262,12 @@ video{
 
 <body>
 
-<!-- PIN -->
+<!-- PIN PAGE -->
 <div id="lock">
 
-    <div class="box">
+    <div class="lock-box">
 
-        <h1>🔐 Special Surprise ❤️</h1>
+        <h1>🔐 Malkin ke liye ❤️</h1>
 
         <p>
             Ye surprise sirf meri Malkin ke liye hai 🥺❤️
@@ -270,16 +276,16 @@ video{
         <input
             type="password"
             id="pin"
-            placeholder="Enter PIN"
             maxlength="4"
+            placeholder="Enter PIN"
         >
 
-        <button class="unlock" onclick="unlock()">
+        <button onclick="unlock()">
             Open My Surprise ❤️
         </button>
 
-        <p id="wrong" style="display:none;color:red;">
-            Galat PIN Malkin 😂❤️
+        <p id="wrong">
+            Galat PIN hai Malkin 😂❤️
         </p>
 
     </div>
@@ -287,8 +293,10 @@ video{
 </div>
 
 
-<!-- CONTENT -->
+<!-- MAIN CONTENT -->
 <div id="content">
+
+<div class="container">
 
     <!-- INTRO -->
     <div class="card">
@@ -296,17 +304,19 @@ video{
         <h1>Welcome to my little surprise... 🥺❤️</h1>
 
         <p>
-        socha sorry to har baar bolta hu lekin is baar thoda
-        alg tarike se apko manau cuteee piee ...
-        <br>
-        Isliye is baar har barr se sabse alg ye hatke se sorry bol rha hu
-        or kuchu puchu sorry sache dil se lekin aapne har baar muje maaf kiya
-        😂❤️ dhuniya ke sabseee payreee ho kuchu puchu ❤️ab is surprise ko dekho mast jannu...❤️
+            socha sorry to har baar bolta hu lekin is baar thoda
+            alg tarike se apko manau cuteee piee ...
+            <br>
+            Isliye is baar har barr se sabse alg ye hatke se sorry bol rha hu
+            or kuchu puchu sorry sache dil se lekin aapne har baar muje maaf kiya
+            😂❤️ dhuniya ke sabseee payreee ho kuchu puchu ❤️
+            ab is surprise ko dekho mast jannu...❤️
         </p>
 
+        <br>
+
         <p>
-            Aur haan...
-            <br><br>
+            Aur haan...<br>
             <b>Sabse pehle... I'M SORRY, MALKIN ❤️</b>
         </p>
 
@@ -316,27 +326,40 @@ video{
     <!-- SORRY NOTE -->
     <div class="card">
 
-        <h2>💌 Malkin ke liye...</h2>
+        <h2>💌 Ek Chhota Sa Sorry</h2>
 
         <p>
-        Malkin, mujhse jo bhi galti hui,
-        uske liye dil se sorry. ❤️
-        <br>
-        Mera intention kabhi bhi apko hurt
-        karna nahi tha.
-        <br>
-        ap mere liye bahut special ho
-        <br>
-        sabseeeeeee spcial ❤️ dil ke sabse karib ❤️
-        me bhi apko apke hi jitnaaaa bohat
-        pyaaar❤️karta huuu or ye pyaar sachi kasam ti life time kam ni hoga
-        balki or din ba din badta ja rha he ❤️limit ni apne dono
-        ak dusre se life time pyaar karege or life time sath rahege ❤️
-        pakkaa promise baby❤️...
-        <br><br>
-        Isliye...
-        <br>
-        <b>Please maaf kar dena , Malkin? 🥺❤️</b>
+            Malkin, mujhse jo bhi galti hui,
+            <br>
+            uske liye dil se sorry. ❤️
+            <br><br>
+
+            Mera intention kabhi bhi apko hurt
+            <br>
+            karna nahi tha.
+            <br><br>
+
+            ap mere liye bahut special ho
+            <br>
+            sabseeeeeee spcial ❤️ dil ke sabse karib ❤️
+            <br><br>
+
+            me bhi apko apke hi jitnaaaa bohat
+            pyaaar❤️karta huuu or ye pyaar sachi kasam ti
+            life time kam ni hoga
+            <br>
+            balki or din ba din badta ja rha he ❤️
+            <br><br>
+
+            limit ni apne dono ak dusre se life time pyaar karege
+            or life time sath rahege ❤️
+            <br>
+            pakkaa promise baby❤️...
+            <br><br>
+
+            Isliye...
+            <br>
+            <b>Please maaf kar dena , Malkin? 🥺❤️</b>
         </p>
 
     </div>
@@ -345,36 +368,40 @@ video{
     <!-- PHOTOS -->
     <div class="card">
 
-        <h2>📸 Hamari Kuch Beautiful Memories ❤️</h2>
+        <h2>📸 Hamari Kuchh Yaadein ❤️</h2>
 
         <div class="gallery">
 
             <div class="photo-card">
                 <img src="photo1.jpg" alt="Our Memory 1">
-                <div class="caption">
-                    Jis din humne planning karke ek function mein matching kapde pehne the 💋🤭✨
-                </div>
+                <p class="caption">
+                    Jis din humne planning karke ek function mein
+                    matching kapde pehne the 💋🤭✨
+                </p>
             </div>
 
             <div class="photo-card">
                 <img src="photo2.jpg" alt="Our Memory 2">
-                <div class="caption">
-                    Jis din hum chup-chup ke mandir mein milne gaye the 💖💞🧿
-                </div>
+                <p class="caption">
+                    Jis din hum chup-chup ke mandir mein
+                    milne gaye the 💖💞🧿
+                </p>
             </div>
 
             <div class="photo-card">
                 <img src="photo3.jpg" alt="Our Memory 3">
-                <div class="caption">
-                    Jab hamari love life ka ek sabse behtareen chapter shuru hua tha 🧿✨❣️
-                </div>
+                <p class="caption">
+                    Jab hamari love life ka ek sabse behtareen
+                    chapter shuru hua tha 🧿✨❣️
+                </p>
             </div>
 
             <div class="photo-card">
                 <img src="photo4.jpg" alt="Our Memory 4">
-                <div class="caption">
-                    Aapki biceps... jisse mujhe sabse zyada darr lagta hai 😂😘💋
-                </div>
+                <p class="caption">
+                    Aapki biceps... jisse mujhe sabse zyada
+                    darr lagta hai 😂😘💋
+                </p>
             </div>
 
         </div>
@@ -382,14 +409,12 @@ video{
     </div>
 
 
-    <!-- SONG -->
+    <!-- VOICE -->
     <div class="card">
 
-        <h2>🎵 Malkin ke liye meri awaaz ❤️</h2>
+        <h2>🎧 Aapke Liye Ek Song ❤️</h2>
 
-        <div class="audio-box">
-
-            <p>
+        <p>
             Ye professional singer wali awaaz nahi hai 😂
             <br>
             lekin feeling puri he ❤️ apka fav. song he ma baby...
@@ -399,34 +424,31 @@ video{
             muje apke har ak songs ache se yaad he jo apko pasand he ❤️
             <br><br>
             earphone laga lena Malkin 🎧🥰
-            </p>
+        </p>
 
-            <audio controls>
-                <source src="song.mp3" type="audio/mpeg">
-            </audio>
-
-        </div>
+        <audio controls>
+            <source src="song.mp3" type="audio/mpeg">
+            Your browser does not support audio.
+        </audio>
 
     </div>
 
 
-    <!-- DANCE -->
+    <!-- DANCE VIDEO -->
     <div class="card">
 
-        <h2>💃 Pehle Dance Dekho 😂❤️</h2>
+        <h2>💃 Pehle Ye Dekho 😂❤️</h2>
 
         <p>
-        Socha sirf sorry bolne se kaam nahi chalega 😂
-        Isliye pehle ek mast dance dekh lo. 💃❤️
+            Socha sirf sorry bolne se kaam nahi chalega 😂
+            <br>
+            Isliye pehle ek mast dance dekh lo. 💃❤️
         </p>
 
-        <div class="video-box">
-
-            <video controls playsinline>
-                <source src="dance.mp4" type="video/mp4">
-            </video>
-
-        </div>
+        <video controls playsinline>
+            <source src="dance.mp4" type="video/mp4">
+            Your browser does not support video.
+        </video>
 
     </div>
 
@@ -434,47 +456,43 @@ video{
     <!-- SORRY VIDEO -->
     <div class="card">
 
-        <h2>🥺 Ab meri baat sun lo...</h2>
+        <h2>🥺 Meri Baat Sun Lo ❤️</h2>
 
         <p>
-        Ab mazaak bahut ho gaya 😂
-        <br>
-        Malkin, ab meri baat ek baar
-        video mein sun lena. ❤️
+            Ab mazaak bahut ho gaya 😂
+            <br>
+            Malkin, ab meri baat ek baar
+            <br>
+            video mein sun lena. ❤️
         </p>
 
-        <div class="video-box">
-
-            <video controls playsinline>
-                <source src="sorry.mp4" type="video/mp4">
-            </video>
-
-        </div>
+        <video controls playsinline>
+            <source src="sorry.mp4" type="video/mp4">
+            Your browser does not support video.
+        </video>
 
     </div>
 
 
-    <!-- GAME -->
+    <!-- GAME VIDEO -->
     <div class="card">
 
-        <h2>🎮 Malkin ke liye Game 😂❤️</h2>
+        <h2>😂 Malkin Ke Liye Special</h2>
 
         <p>
-        Agar abhi bhi thoda gussa hai...
-        <br>
-        Toh ye video Malkin ke liye compulsory hai 😂❤️
-        <br>
-        Iske baad Malkin ka saara gussa
-        utar jaaega baby❤️😌😂
+            Agar abhi bhi thoda gussa hai...
+            <br>
+            Toh ye video Malkin ke liye compulsory hai 😂❤️
+            <br>
+            Iske baad Malkin ka saara gussa
+            <br>
+            utar jaaega baby❤️😌😂
         </p>
 
-        <div class="video-box">
-
-            <video controls playsinline>
-                <source src="game.mp4" type="video/mp4">
-            </video>
-
-        </div>
+        <video controls playsinline>
+            <source src="game.mp4" type="video/mp4">
+            Your browser does not support video.
+        </video>
 
     </div>
 
@@ -482,49 +500,56 @@ video{
     <!-- FUTURE -->
     <div class="card future">
 
-        <h2>🔮 Our Future ❤️</h2>
+        <h2>🥰 Hamara Future ❤️</h2>
 
         <p>
-        Aur ye photo...
-        <br>
-        Abhi sirf ek imagination hai. 🥰
-        <br>
-        Lekin dil se vishvas he ...
-        <br>
-        Ek din ye imagination reality banegi. ❤️
+            Aur ye photo...
+            <br>
+            Abhi sirf ek imagination hai. 🥰
+            <br>
+            Lekin dil se vishvas he ...
+            <br>
+            Ek din ye imagination reality banegi. ❤️
         </p>
 
-        <img src="future.png" alt="Our Future">
+        <!-- FINAL JPG -->
+        <img src="future.jpg" alt="Our Future">
 
     </div>
 
 
     <!-- FINAL QUESTION -->
-    <div class="card love-question">
+    <div class="card">
 
-        <h2>❤️ Ek Last Question...</h2>
+        <h2>
+            Ab to khus ho na makin.. 😂❤️
+        </h2>
 
-        <p>
-            <b>Ab to khus ho na makin.. 😂❤️</b>
-        </p>
+        <br>
 
-        <p style="font-size:21px;">
-            Ab to mujhse <b>BAHUTTTTT PYAAR</b>
-            karti ho na, Malkin? 🥺❤️
-        </p>
+        <h2>
+            Ab to mujhse BAHUTTTTT PYAAR karti ho na,
+            Malkin? 🥺❤️
+        </h2>
 
-        <button class="yes-btn" onclick="sayYes()">
-            YES ❤️
-        </button>
+        <div class="yesno">
 
-        <button class="no-btn" onclick="sayNo()">
-            NO 😂
-        </button>
+            <button onclick="sayYes()">
+                YES ❤️
+            </button>
+
+            <button onclick="sayNo()">
+                NO 😂
+            </button>
+
+        </div>
 
         <div id="noMessage">
-            Malkin ji ek baar fir soch lo 😂❤️
+            Achaaa 😭😂
+            <br><br>
+            Itna sab dekhne ke baad bhi NO?
             <br>
-            YES daba do na 🥺👉👈❤️
+            Malkin, ek baar YES daba do na 🥺❤️😂
         </div>
 
     </div>
@@ -535,41 +560,45 @@ video{
 
         <div class="premium">
 
-            <h2>💎 Premium Love Plan ❤️</h2>
+            <h2>💎 PREMIUM LOVE PLAN 💎</h2>
 
             <p>
                 Malkin ko successfully
+                <br>
                 <b>Premium Love Plan</b>
+                <br>
                 subscription mil gaya😂❤️
             </p>
 
-            <div class="plan">
+            <div class="benefits">
 
-                ❤️ Unlimited pyaar<br>
-                🤗 Unlimited hugs<br>
-                💋 Unlimited kisses<br>
-                🗣️ Unlimited baatein<br>
-                😂 Unlimited pareshan karna<br>
-                🫶 Unlimited care<br>
-                😊 Unlimited smile<br>
-                ❤️ Har situation mein saath<br>
-                💕 Lifetime sath mera
+                <p>❤️ Unlimited Pyaar</p>
+                <p>🤗 Unlimited Hugs</p>
+                <p>💋 Unlimited Kisses</p>
+                <p>💬 Unlimited Baatein</p>
+                <p>😂 Unlimited Pareshan Karna</p>
+                <p>🥰 Unlimited Care</p>
+                <p>😊 Unlimited Smile</p>
+                <p>🤝 Har Situation Mein Saath</p>
+                <p>💍 Lifetime sath mera</p>
 
             </div>
 
             <div class="price">
-                💰 Price = Malkin ki cute smile 😘❤️
+                💰 Price: Malkin ki Cute Smile ❤️
             </div>
 
-            <p class="final">
-                🎉 Subscription Successfully Activated! 🎉
-                <br><br>
-                Ye subscription kabhi expire nahi hoga ❤️
+            <p class="activated">
+                ✅ Subscription Activated Successfully ❤️
+                <br>
+                🔒 Subscription Never Expires 😂❤️
             </p>
 
         </div>
 
     </div>
+
+</div>
 
 </div>
 
@@ -633,7 +662,7 @@ function createHearts(){
 
         heart.style.animationDuration=(3+Math.random()*4)+"s";
 
-        heart.style.fontSize=(15+Math.random()*20)+"px";
+        heart.style.fontSize=(15+Math.random()*25)+"px";
 
         document.body.appendChild(heart);
 
