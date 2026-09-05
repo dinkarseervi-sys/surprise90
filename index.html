@@ -50,22 +50,12 @@ input{
     margin:15px 0;
 }
 
-button{
-    border:none;
-    cursor:pointer;
-}
-
 .unlock{
     background:#ff4f81;
     color:white;
     padding:13px 30px;
     border-radius:25px;
     font-size:17px;
-}
-
-#content{
-    display:none;
-    padding:20px 12px 50px;
 }
 
 .card{
@@ -75,6 +65,11 @@ button{
     padding:25px;
     border-radius:25px;
     box-shadow:0 8px 25px rgba(0,0,0,.15);
+}
+
+#content{
+    display:none;
+    padding:20px 12px 50px;
 }
 
 h1,h2{
@@ -106,6 +101,7 @@ p{
     height:250px;
     object-fit:cover;
     border-radius:15px;
+    display:block;
 }
 
 .caption{
@@ -147,6 +143,9 @@ video{
     max-width:600px;
     border-radius:20px;
     margin-top:15px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 .love-question{
@@ -223,6 +222,7 @@ video{
     font-size:22px;
     animation:float 5s linear forwards;
     pointer-events:none;
+    z-index:9999;
 }
 
 @keyframes float{
@@ -344,7 +344,7 @@ video{
     </div>
 
 
-    <!-- PHOTOS -->
+    <!-- 4 PHOTOS -->
     <div class="card">
 
         <h2>📸 Hamari Kuch Beautiful Memories ❤️</h2>
@@ -352,28 +352,28 @@ video{
         <div class="gallery">
 
             <div class="photo-card">
-                <img src="images/photo1.jpg" alt="Our Memory 1">
+                <img src="photo1.jpg" alt="Our Memory 1">
                 <div class="caption">
                     Jis din humne planning karke ek function mein matching kapde pehne the 💋🤭✨
                 </div>
             </div>
 
             <div class="photo-card">
-                <img src="images/photo2.jpg" alt="Our Memory 2">
+                <img src="photo2.jpg" alt="Our Memory 2">
                 <div class="caption">
                     Jis din hum chup-chup ke mandir mein milne gaye the 💖💞🧿
                 </div>
             </div>
 
             <div class="photo-card">
-                <img src="images/photo3.jpg" alt="Our Memory 3">
+                <img src="photo3.jpg" alt="Our Memory 3">
                 <div class="caption">
                     Jab hamari love life ka ek sabse behtareen chapter shuru hua tha 🧿✨❣️
                 </div>
             </div>
 
             <div class="photo-card">
-                <img src="images/photo4.jpg" alt="Our Memory 4">
+                <img src="photo4.jpg" alt="Our Memory 4">
                 <div class="caption">
                     Aapki biceps... jisse mujhe sabse zyada darr lagta hai 😂😘💋
                 </div>
@@ -384,7 +384,7 @@ video{
     </div>
 
 
-    <!-- VOICE -->
+    <!-- SONG -->
     <div class="card">
 
         <h2>🎵 Malkin ke liye meri awaaz ❤️</h2>
@@ -413,7 +413,7 @@ video{
     </div>
 
 
-    <!-- DANCE VIDEO -->
+    <!-- DANCE -->
     <div class="card">
 
         <h2>💃 Pehle Dance Dekho 😂❤️</h2>
@@ -459,7 +459,7 @@ video{
     </div>
 
 
-    <!-- GAME VIDEO -->
+    <!-- GAME -->
     <div class="card">
 
         <h2>🎮 Malkin ke liye Game 😂❤️</h2>
@@ -505,7 +505,7 @@ video{
     </div>
 
 
-    <!-- QUESTION -->
+    <!-- FINAL QUESTION -->
     <div class="card love-question">
 
         <h2>❤️ Ek Last Question...</h2>
@@ -536,7 +536,7 @@ video{
     </div>
 
 
-    <!-- PREMIUM -->
+    <!-- PREMIUM LOVE -->
     <div id="subscription">
 
         <div class="premium">
