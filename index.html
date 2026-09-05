@@ -14,7 +14,7 @@
 body{
     margin:0;
     font-family:Arial,sans-serif;
-    background:linear-gradient(135deg,#ffd6e7,#fff5f9);
+    background:linear-gradient(135deg,#ff6f91,#ffb6c1,#fff0f5);
     color:#333;
     text-align:center;
 }
@@ -29,132 +29,153 @@ body{
 
 .box{
     background:white;
-    width:100%;
-    max-width:390px;
     padding:35px 25px;
-    border-radius:28px;
-    box-shadow:0 10px 35px #0002;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+    max-width:400px;
+    width:100%;
 }
 
 .box h1{
-    color:#e91e63;
+    color:#ff4f81;
 }
 
 input{
     padding:14px;
-    width:85%;
-    border:1px solid #ddd;
-    border-radius:14px;
+    width:100%;
+    border:2px solid #ff8fab;
+    border-radius:15px;
     font-size:18px;
     text-align:center;
-    outline:none;
+    margin:15px 0;
 }
 
 button{
-    margin-top:15px;
-    padding:13px 25px;
-    border:0;
-    border-radius:30px;
-    background:#e91e63;
-    color:white;
-    font-size:16px;
+    border:none;
     cursor:pointer;
-    transition:.3s;
 }
 
-button:hover{
-    transform:scale(1.05);
-}
-
-#error{
-    color:#e53935;
-    display:none;
+.unlock{
+    background:#ff4f81;
+    color:white;
+    padding:13px 30px;
+    border-radius:25px;
+    font-size:17px;
 }
 
 #content{
     display:none;
-    padding:25px 15px 60px;
+    padding:20px 12px 50px;
 }
 
 .card{
-    background:white;
-    max-width:650px;
+    background:rgba(255,255,255,.95);
+    max-width:850px;
     margin:25px auto;
-    padding:25px 20px;
-    border-radius:28px;
-    box-shadow:0 8px 30px #0002;
+    padding:25px;
+    border-radius:25px;
+    box-shadow:0 8px 25px rgba(0,0,0,.15);
 }
 
-h1{
-    color:#e91e63;
+h1,h2{
+    color:#ff3f75;
 }
 
-h2{
-    color:#d81b60;
-}
-
-.message{
-    font-size:19px;
+p{
     line-height:1.7;
+    font-size:17px;
 }
 
 .gallery{
     display:grid;
     grid-template-columns:repeat(2,1fr);
-    gap:12px;
-    margin-top:20px;
+    gap:15px;
+    max-width:800px;
+    margin:auto;
 }
 
-.gallery img{
-    width:100%;
-    height:180px;
-    object-fit:cover;
+.photo-card{
+    background:#fff;
+    padding:10px;
     border-radius:18px;
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
+}
+
+.photo-card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+.caption{
+    font-size:15px;
+    font-weight:bold;
+    color:#ff3f75;
+    margin:12px 5px 5px;
+    line-height:1.5;
+}
+
+.audio-box{
+    background:#fff0f5;
+    padding:20px;
+    border-radius:20px;
+}
+
+audio{
+    width:100%;
+    max-width:600px;
 }
 
 .video-box{
-    margin-top:20px;
+    margin:20px auto;
+    max-width:700px;
 }
 
 video{
     width:100%;
     border-radius:20px;
-    margin-top:15px;
-}
-
-audio{
-    width:100%;
-    margin-top:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.2);
 }
 
 .future{
-    background:linear-gradient(135deg,#fff8e1,#ffe0ec);
-    border:2px solid #f3c969;
+    background:linear-gradient(135deg,#fff,#ffe4ec);
 }
 
 .future img{
     width:100%;
-    max-width:450px;
-    border-radius:22px;
+    max-width:600px;
+    border-radius:20px;
     margin-top:15px;
 }
 
 .love-question{
-    background:linear-gradient(135deg,#fff,#ffe0ec);
+    background:#fff;
 }
 
 .yes-btn{
-    background:#e91e63;
+    background:#ff3f75;
+    color:white;
+    padding:15px 35px;
+    border-radius:30px;
+    font-size:20px;
+    margin:10px;
 }
 
 .no-btn{
     background:#777;
+    color:white;
+    padding:15px 35px;
+    border-radius:30px;
+    font-size:20px;
+    margin:10px;
 }
 
 #noMessage{
     display:none;
     margin-top:20px;
-    font-size:20px;
+    color:#ff3f75;
+    font-weight:bold;
 }
 
 #subscription{
@@ -162,49 +183,74 @@ audio{
 }
 
 .premium{
-    background:linear-gradient(135deg,#fff8e1,#ffe0ec);
-    border:2px solid #e0b84c;
-    border-radius:30px;
+    background:linear-gradient(135deg,#fff8dc,#fff);
+    border:3px solid #d4af37;
+    max-width:600px;
+    margin:25px auto;
     padding:30px 20px;
-    box-shadow:0 12px 35px #0002;
+    border-radius:30px;
+    box-shadow:0 10px 35px rgba(212,175,55,.3);
 }
 
-.premium h1,
 .premium h2{
     color:#b8860b;
 }
 
 .plan{
     text-align:left;
-    max-width:380px;
-    margin:20px auto;
-    font-size:18px;
+    max-width:450px;
+    margin:auto;
     line-height:2;
+    font-size:17px;
+}
+
+.price{
+    font-size:20px;
+    font-weight:bold;
+    color:#b8860b;
+    margin-top:20px;
 }
 
 .final{
-    font-size:23px;
-    color:#e91e63;
+    font-size:20px;
+    color:#ff3f75;
     font-weight:bold;
 }
 
 .heart{
     position:fixed;
-    bottom:-30px;
-    font-size:25px;
+    bottom:-20px;
+    font-size:22px;
+    animation:float 5s linear forwards;
     pointer-events:none;
-    animation:heartUp 4s linear forwards;
 }
 
-@keyframes heartUp{
+@keyframes float{
     0%{
         transform:translateY(0);
         opacity:1;
     }
-
     100%{
         transform:translateY(-100vh);
         opacity:0;
+    }
+}
+
+@media(max-width:600px){
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
+    .photo-card img{
+        height:280px;
+    }
+
+    .card{
+        padding:20px 15px;
+    }
+
+    p{
+        font-size:16px;
     }
 }
 </style>
@@ -212,35 +258,30 @@ audio{
 
 <body>
 
-<!-- ================= PIN PAGE ================= -->
-
+<!-- PIN PAGE -->
 <div id="lock">
 
     <div class="box">
 
-        <h1>🔐 Special Surprise</h1>
+        <h1>🔐 Special Surprise ❤️</h1>
 
         <p>
-            Ye surprise sirf meri special <b>Malkin</b> ke liye hai ❤️
-        </p>
-
-        <p>
-            PIN daalo aur andar aao... 😂❤️
+            Ye surprise sirf meri Malkin ke liye hai 🥺❤️
         </p>
 
         <input
             type="password"
             id="pin"
-            placeholder="Enter PIN">
+            placeholder="Enter PIN"
+            maxlength="4"
+        >
 
-        <br>
-
-        <button onclick="unlock()">
-            Open Surprise 💌
+        <button class="unlock" onclick="unlock()">
+            Open My Surprise ❤️
         </button>
 
-        <p id="error">
-            Wrong PIN 😅 Try Again!
+        <p id="wrong" style="display:none;color:red;">
+            Galat PIN Malkin 😂❤️
         </p>
 
     </div>
@@ -248,105 +289,95 @@ audio{
 </div>
 
 
-<!-- ================= MAIN CONTENT ================= -->
-
+<!-- MAIN CONTENT -->
 <div id="content">
 
     <!-- INTRO -->
-
     <div class="card">
 
-        <h1>❤️ Hey Malkin ❤️</h1>
+        <h1>Welcome to my little surprise... 🥺❤️</h1>
 
-        <p class="message">
+        <p>
+        socha sorry to har baar bolta hu lekin is baar thoda
+        alg tarike se apko manau cuteee piee ...
+        <br>
+        Isliye is baar har barr se sabse alg ye hatke se sorry bol rha hu
+        or kuchu puchu sorry sache dil se lekin aapne har baar muje maaf kiya
+        😂❤️ dhuniya ke sabseee payreee ho kuchu puchu ❤️ab is surprise ko dekho mast jannu...❤️
+        </p>
 
-            Welcome to my little surprise... 🥺❤️
-
-            <br><br>
-
-            socha sorry to har baar bolta hu lekin is baar thoda
-            alg tarike se apko manau cuteee piee ...
-
-            <br><br>
-
-            Isliye is baar har barr se sabse alg ye hatke se sorry bol rha hu
-            or kuchu puchu sorry sache dil se lekin aapne har baar muje maaf kiya 
-            😂❤️ dhuniya ke sabseee payreee ho kuchu puchu ❤️ab is surprise ko dekho mast jannu...❤️
-
-            <br><br>
-
+        <p>
             Aur haan...
-
-            <br>
-
+            <br><br>
             <b>Sabse pehle... I'M SORRY, MALKIN ❤️</b>
-
         </p>
 
     </div>
 
 
     <!-- SORRY -->
-
     <div class="card">
 
-        <h2>🥺 Malkin, Sabse Pehle Sorry</h2>
+        <h2>💌 Malkin ke liye...</h2>
 
-        <p class="message">
-
-            Malkin, mujhse jo bhi galti hui,
-            uske liye dil se sorry. ❤️
-
-            <br><br>
-
-            Mera intention kabhi bhi apko hurt
-            karna nahi tha.
-
-            <br><br>
-
-            ap mere liye bahut special ho
-            sabseeeeeee spcial ❤️ dil ke sabse karib ❤️me bhi apko apke hi jitnaaaa bohat
-            pyaaar❤️karta huuu or ye pyaar sachi kasam ti life time kam ni hoga
-            balki or din ba din badta ja rha he ❤️limit ni apne dono
-            ak dusre se life time pyaar karege or life time sath rahege ❤️pakkaa promise baby❤️...
-
-            <br><br>
-
-            Isliye...
-
-            <br>
-
-            <b>Please maaf kar dena , Malkin? 🥺❤️</b>
-
+        <p>
+        Malkin, mujhse jo bhi galti hui,
+        uske liye dil se sorry. ❤️
+        <br>
+        Mera intention kabhi bhi apko hurt
+        karna nahi tha.
+        <br>
+        ap mere liye bahut special ho
+        <br>
+        sabseeeeeee spcial ❤️ dil ke sabse karib ❤️
+        me bhi apko apke hi jitnaaaa bohat
+        pyaaar❤️karta huuu or ye pyaar sachi kasam ti life time kam ni hoga
+        balki or din ba din badta ja rha he ❤️limit ni apne dono
+        ak dusre se life time pyaar karege or life time sath rahege ❤️
+        pakkaa promise baby❤️...
+        <br><br>
+        Isliye...
+        <br>
+        <b>Please maaf kar dena , Malkin? 🥺❤️</b>
         </p>
 
     </div>
 
 
     <!-- PHOTOS -->
-
     <div class="card">
 
-        <h2>📸 Hamari pyarri Si Duniya</h2>
-
-        <p>
-            Kuch memories jo hamre liye bahut special hain,
-            Malkin ❤️
-        </p>
+        <h2>📸 Hamari Kuch Beautiful Memories ❤️</h2>
 
         <div class="gallery">
 
-            <img src="images/photo1.jpg"
-                 alt="Our Memory">
+            <div class="photo-card">
+                <img src="images/photo1.jpg" alt="Our Memory 1">
+                <div class="caption">
+                    Jis din humne planning karke ek function mein matching kapde pehne the 💋🤭✨
+                </div>
+            </div>
 
-            <img src="images/photo2.jpg"
-                 alt="Our Memory">
+            <div class="photo-card">
+                <img src="images/photo2.jpg" alt="Our Memory 2">
+                <div class="caption">
+                    Jis din hum chup-chup ke mandir mein milne gaye the 💖💞🧿
+                </div>
+            </div>
 
-            <img src="images/photo3.jpg"
-                 alt="Our Memory">
-            
-             <img src="images/photo4.jpg"
-                 alt="Our Memory">
+            <div class="photo-card">
+                <img src="images/photo3.jpg" alt="Our Memory 3">
+                <div class="caption">
+                    Jab hamari love life ka ek sabse behtareen chapter shuru hua tha 🧿✨❣️
+                </div>
+            </div>
+
+            <div class="photo-card">
+                <img src="images/photo4.jpg" alt="Our Memory 4">
+                <div class="caption">
+                    Aapki biceps... jisse mujhe sabse zyada darr lagta hai 😂😘💋
+                </div>
+            </div>
 
         </div>
 
@@ -354,62 +385,49 @@ audio{
 
 
     <!-- VOICE -->
-
     <div class="card">
 
-        <h2>🎙️ Ek song Sirf Malkin Ke Liye</h2>
+        <h2>🎵 Malkin ke liye meri awaaz ❤️</h2>
 
-        <p class="message">
+        <div class="audio-box">
 
+            <p>
             Ye professional singer wali awaaz nahi hai 😂
+            <br>
             lekin feeling puri he ❤️ apka fav. song he ma baby...
-
-            <br><br>
-
+            <br>
             Lekin dil se gaya hai... ❤️
+            <br>
             muje apke har ak songs ache se yaad he jo apko pasand he ❤️
-
             <br><br>
-
             earphone laga lena Malkin 🎧🥰
+            </p>
 
-        </p>
+            <audio controls>
+                <source src="song.mp3" type="audio/mpeg">
+                Your browser does not support audio.
+            </audio>
 
-        <audio controls>
-
-            <source
-                src="audio/song.mp3"
-                type="audio/mpeg">
-
-        </audio>
+        </div>
 
     </div>
 
 
     <!-- DANCE VIDEO -->
-
     <div class="card">
 
-        <h2>💃 Malkin Ke Liye Thoda Entertainment</h2>
+        <h2>💃 Pehle Dance Dekho 😂❤️</h2>
 
-        <p class="message">
-
-            Socha sirf sorry bolne se kaam nahi chalega 😂
-
-            <br><br>
-
-            Isliye pehle ek mast dance dekh lo. 💃❤️
-
+        <p>
+        Socha sirf sorry bolne se kaam nahi chalega 😂
+        Isliye pehle ek mast dance dekh lo. 💃❤️
         </p>
 
         <div class="video-box">
 
-            <video controls>
-
-                <source
-                    src="videos/dance.mp4"
-                    type="video/mp4">
-
+            <video controls playsinline>
+                <source src="dance.mp4" type="video/mp4">
+                Your browser does not support video.
             </video>
 
         </div>
@@ -418,30 +436,22 @@ audio{
 
 
     <!-- SORRY VIDEO -->
-
     <div class="card">
 
-        <h2>🥺 Ab Seriously dil Wali Sorry</h2>
+        <h2>🥺 Ab meri baat sun lo...</h2>
 
-        <p class="message">
-
-            Ab mazaak bahut ho gaya 😂
-
-            <br><br>
-
-            Malkin, ab meri baat ek baar
-            video mein sun lena. ❤️
-
+        <p>
+        Ab mazaak bahut ho gaya 😂
+        <br>
+        Malkin, ab meri baat ek baar
+        video mein sun lena. ❤️
         </p>
 
         <div class="video-box">
 
-            <video controls>
-
-                <source
-                    src="videos/sorry.mp4"
-                    type="video/mp4">
-
+            <video controls playsinline>
+                <source src="sorry.mp4" type="video/mp4">
+                Your browser does not support video.
             </video>
 
         </div>
@@ -449,37 +459,25 @@ audio{
     </div>
 
 
-    <!-- Apke liye spcial VIDEO -->
-
+    <!-- GAME VIDEO -->
     <div class="card">
 
-        <h2>🎮 Malkin Ka Gussa Utarne Ka Treatment 😂</h2>
+        <h2>🎮 Malkin ke liye Game 😂❤️</h2>
 
-        <p class="message">
-
-            Agar abhi bhi thoda gussa hai...
-
-            <br><br>
-
-            Toh ye video Malkin ke liye compulsory hai 😂❤️
-
-            <br><br>
-
-            <b>
-            Iske baad Malkin ka saara gussa
-            utar jaaega baby❤️😌😂
-            </b>
-
+        <p>
+        Agar abhi bhi thoda gussa hai...
+        <br>
+        Toh ye video Malkin ke liye compulsory hai 😂❤️
+        <br>
+        Iske baad Malkin ka saara gussa
+        utar jaaega baby❤️😌😂
         </p>
 
         <div class="video-box">
 
-            <video controls>
-
-                <source
-                    src="videos/game.mp4"
-                    type="video/mp4">
-
+            <video controls playsinline>
+                <source src="game.mp4" type="video/mp4">
+                Your browser does not support video.
             </video>
 
         </div>
@@ -488,216 +486,91 @@ audio{
 
 
     <!-- FUTURE -->
-
     <div class="card future">
 
-        <h2>🔮 Malkin Ke Saath Ek Future Dream</h2>
+        <h2>🔮 Our Future ❤️</h2>
 
-        <p class="message">
-
-            Aur ye photo...
-
-            <br><br>
-
-            Abhi sirf ek imagination hai. 🥰
-
-            <br><br>
-
-            Lekin dil se vishvas he ...
-
-            <br><br>
-
-            <b>
-            Ek din ye imagination reality banegi. ❤️
-            </b>
-
+        <p>
+        Aur ye photo...
+        <br>
+        Abhi sirf ek imagination hai. 🥰
+        <br>
+        Lekin dil se vishvas he ...
+        <br>
+        Ek din ye imagination reality banegi. ❤️
         </p>
 
-        <img
-            src="images/future.jpg"
-            alt="Our Future">
+        <img src="future.jpg" alt="Our Future">
 
     </div>
 
 
-    <!-- FINAL QUESTION -->
-
+    <!-- QUESTION -->
     <div class="card love-question">
 
-        <h1>🥺❤️ Malkin Se One Last Question ❤️🥺</h1>
+        <h2>❤️ Ek Last Question...</h2>
 
-        <p class="message">
-
-            Ab to khus ho na makin.. 😂❤️
-
-            <br><br>
-
-            Ab to mujhse
-
-            <br>
-
-            <b>BAHUTTTTT PYAAR</b>
-
-            <br>
-
-            karti ho na, Malkin? 🥺❤️
-
+        <p>
+            <b>Ab to khus ho na makin.. 😂❤️</b>
         </p>
 
+        <p style="font-size:21px;">
+            Ab to mujhse <b>BAHUTTTTT PYAAR</b>
+            karti ho na, Malkin? 🥺❤️
+        </p>
 
-        <button
-            class="yes-btn"
-            onclick="yesClicked()">
-
+        <button class="yes-btn" onclick="sayYes()">
             YES ❤️
-
         </button>
 
-
-        <button
-            class="no-btn"
-            onclick="noClicked()">
-
-            NO 🙈
-
+        <button class="no-btn" onclick="sayNo()">
+            NO 😂
         </button>
-
 
         <div id="noMessage">
-
-            🥺👉👈
-
-            <br><br>
-
-            Achhaaa Malkin...
-            abhi bhi gussa ho? 😂
-
-            <br><br>
-
-            Dekho udhar 👉❤️
-
+            Malkin ji ek baar fir soch lo 😂❤️
             <br>
-
-            YES button apka wait kar raha hai 😂
-
-            <br><br>
-
-            <button onclick="yesClicked()">
-
-                YES Daba Do Na Malkin plzzzz😂❤️
-
-            </button>
-
+            YES daba do na 🥺👉👈❤️
         </div>
 
     </div>
 
 
-    <!-- PREMIUM LOVE -->
-
+    <!-- PREMIUM -->
     <div id="subscription">
 
-        <div class="card premium">
+        <div class="premium">
 
-            <h1>
-                💎 PREMIUM LOVE 💎
-            </h1>
+            <h2>💎 Premium Love Plan ❤️</h2>
 
-            <h2>
-                ❤️ LIFE TIME PLAN ❤️
-            </h2>
-
-            <p class="message">
-
-                🎉 Congratulations Malkin! 🎉
-
-                <br><br>
-
+            <p>
                 Malkin ko successfully
                 <b>Premium Love Plan</b>
                 subscription mil gaya😂❤️
-
             </p>
-
 
             <div class="plan">
 
-                ❤️ Unlimited Pyaar
-
-                <br>
-
-                🤗 Unlimited Hugs
-
-                <br>
-
-                😘 Unlimited Kisses
-
-                <br>
-
-                🗣️ Unlimited Baatein
-
-                <br>
-
-                😂 Unlimited Pareshan Karna
-
-                <br>
-
-                🫶 Unlimited Care
-
-                <br>
-
-                🥰 Unlimited Smile
-
-                <br>
-
-                ❤️ Har Situation Mein Saath
-
-                <br>
-
-                ♾️ Lifetime sath mera
+                ❤️ Unlimited pyaar<br>
+                🤗 Unlimited hugs<br>
+                💋 Unlimited kisses<br>
+                🗣️ Unlimited baatein<br>
+                😂 Unlimited pareshan karna<br>
+                🫶 Unlimited care<br>
+                😊 Unlimited smile<br>
+                ❤️ Har situation mein saath<br>
+                💕 Lifetime sath mera
 
             </div>
 
-
-            <h2>
-                💎 SUBSCRIPTION:
-                NEVER EXPIRES ♾️
-            </h2>
-
-
-            <p>
-
-                💰 Price:
-
-                <br>
-
-                <b>
-                Sirf Malkin ki ek cute si smile 😊❤️
-                </b>
-
-            </p>
-
+            <div class="price">
+                💰 Price = Malkin ki cute smile 😘❤️
+            </div>
 
             <p class="final">
-
-                ❤️ MALKIN KA LIFE TIME PLAN ACTIVATED ❤️
-
-            </p>
-
-
-            <p class="message">
-
-                Thank you Malkin,
-                for choosing me 😂❤️
-
+                🎉 Subscription Successfully Activated! 🎉
                 <br><br>
-
-                I Love You Malkin ❤️
-
-                <br><br>
-
-                Always keep smiling 😊
-
+                Ye subscription kabhi expire nahi hoga ❤️
             </p>
 
         </div>
@@ -707,60 +580,44 @@ audio{
 </div>
 
 
-<!-- ================= JAVASCRIPT ================= -->
-
 <script>
 
 function unlock(){
 
-    const pin =
-        document.getElementById("pin").value;
+    let pin = document.getElementById("pin").value;
 
     if(pin === "1917"){
 
-        document.getElementById("lock")
-        .style.display="none";
+        document.getElementById("lock").style.display="none";
 
-        document.getElementById("content")
-        .style.display="block";
+        document.getElementById("content").style.display="block";
 
         window.scrollTo(0,0);
 
         createHearts();
 
-    }
+    }else{
 
-    else{
-
-        document.getElementById("error")
-        .style.display="block";
+        document.getElementById("wrong").style.display="block";
 
     }
 
 }
 
 
-function noClicked(){
+function sayNo(){
 
-    document.getElementById("noMessage")
-    .style.display="block";
+    document.getElementById("noMessage").style.display="block";
 
 }
 
 
-function yesClicked(){
+function sayYes(){
 
-    document.getElementById("noMessage")
-    .style.display="none";
+    document.getElementById("subscription").style.display="block";
 
-    document.getElementById("subscription")
-    .style.display="block";
-
-    document.getElementById("subscription")
-    .scrollIntoView({
-
+    document.getElementById("subscription").scrollIntoView({
         behavior:"smooth"
-
     });
 
     createHearts();
@@ -772,44 +629,23 @@ function createHearts(){
 
     for(let i=0;i<20;i++){
 
-        setTimeout(function(){
+        let heart=document.createElement("div");
 
-            const heart =
-                document.createElement("div");
+        heart.className="heart";
 
-            heart.className="heart";
+        heart.innerHTML="❤️";
 
-            const hearts=[
-                "❤️",
-                "💕",
-                "💖",
-                "💗",
-                "🥰",
-                "😘"
-            ];
+        heart.style.left=Math.random()*100+"%";
 
-            heart.innerHTML =
-                hearts[
-                    Math.floor(
-                        Math.random()*hearts.length
-                    )
-                ];
+        heart.style.animationDuration=(3+Math.random()*4)+"s";
 
-            heart.style.left =
-                Math.random()*100+"vw";
+        heart.style.fontSize=(15+Math.random()*20)+"px";
 
-            heart.style.animationDuration =
-                (3+Math.random()*3)+"s";
+        document.body.appendChild(heart);
 
-            document.body.appendChild(heart);
-
-            setTimeout(function(){
-
-                heart.remove();
-
-            },6000);
-
-        },i*120);
+        setTimeout(()=>{
+            heart.remove();
+        },7000);
 
     }
 
